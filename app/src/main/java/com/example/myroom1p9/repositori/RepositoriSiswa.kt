@@ -1,5 +1,6 @@
 package com.example.myroom1p9.repositori
 
+// PASTIKAN MENG-IMPORT SISWA DARI 'room'
 import com.example.myroom1p9.room.Siswa
 import com.example.myroom1p9.room.SiswaDao
 import kotlinx.coroutines.flow.Flow
@@ -16,5 +17,6 @@ class OfflineRepositoriSiswa(
 
     override fun getAllSiswaStream(): Flow<List<Siswa>> = siswaDao.getAllSiswa()
 
+    // REVISI: Gunakan tipe Siswa dari 'room' di sini juga
     override suspend fun insertSiswa(siswa: Siswa) = siswaDao.insert(siswa)
 }
